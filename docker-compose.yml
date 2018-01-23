@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  zabbix_partitioning:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: "zabbix_partitioning"
+    image: "zabbix_partitioning:0.1.0"
+    volumes:
+      - "$PWD/app:/app"
+    ports:
+      - "3501:3501" #DEBUG port
+
